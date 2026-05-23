@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/hr-and-people/refs/heads/main/json-schema/hr-and-people-employment-schema.json",
+  "title": "Employment",
+  "description": "An Employment record representing a position an employee holds at a company, aligned with HRIS, unified-HRIS, and payroll APIs.",
+  "type": "object",
+  "required": ["id", "employeeId"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the employment record."
+    },
+    "employeeId": {
+      "type": "string",
+      "description": "Identifier of the employee this employment record applies to."
+    },
+    "remoteId": {
+      "type": ["string", "null"],
+      "description": "Identifier in the source HRIS or payroll system."
+    },
+    "jobTitle": {
+      "type": ["string", "null"],
+      "description": "Job title for the employment record.",
+      "example": "Senior Software Engineer"
+    },
+    "department": {
+      "type": ["string", "null"],
+      "description": "Department associated with this employment record.",
+      "example": "Engineering"
+    },
+    "team": {
+      "type": ["string", "null"],
+      "description": "Team within the department."
+    },
+    "businessUnit": {
+      "type": ["string", "null"],
+      "description": "Business unit or division."
+    },
+    "workLocationId": {
+      "type": ["string", "null"],
+      "description": "Identifier of the work location for this employment record."
+    },
+    "managerId": {
+      "type": ["string", "null"],
+      "description": "Employee id of the manager for this employment."
+    },
+    "employmentType": {
+      "type": ["string", "null"],
+      "enum": [null, "full_time", "part_time", "contractor", "intern", "temporary", "freelance", "other"],
+      "description": "Type of employment relationship."
+    },
+    "workerType": {
+      "type": ["string", "null"],
+      "enum": [null, "employee", "contractor", "contingent", "intern"],
+      "description": "Worker classification."
+    },
+    "ftEquivalent": {
+      "type": ["number", "null"],
+      "description": "Full-time equivalent expressed as a fraction (1.0 = full-time).",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "payRate": {
+      "type": ["number", "null"],
+      "description": "Pay rate amount for this employment."
+    },
+    "payCurrency": {
+      "type": ["string", "null"],
+      "description": "ISO 4217 currency code for the pay rate.",
+      "example": "USD"
+    },
+    "payPeriod": {
+      "type": ["string", "null"],
+      "enum": [null, "hour", "day", "week", "biweekly", "semimonthly", "month", "quarter", "year"],
+      "description": "Period the pay rate is expressed over."
+    },
+    "payFrequency": {
+      "type": ["string", "null"],
+      "enum": [null, "weekly", "biweekly", "semimonthly", "monthly"],
+      "description": "How often the employee is paid."
+    },
+    "effectiveDate": {
+      "type": ["string", "null"],
+      "format": "date",
+      "description": "Date this employment record becomes effective."
+    },
+    "endDate": {
+      "type": ["string", "null"],
+      "format": "date",
+      "description": "Date this employment record ends, if applicable."
+    },
+    "isPrimary": {
+      "type": "boolean",
+      "description": "Whether this is the employee's primary employment record.",
+      "default": true
+    },
+    "createdAt": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    }
+  }
+}

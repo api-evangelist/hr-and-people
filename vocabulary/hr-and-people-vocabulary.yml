@@ -1,0 +1,244 @@
+vocabulary: "1.0.0"
+
+info:
+  topic: HR & People
+  description: >-
+    Shared vocabulary for the HR and people-operations domain, mapping HRIS,
+    unified-HRIS, payroll, applicant tracking, performance, engagement, and
+    people-data API surfaces onto a common Employee record and a small set of
+    aligned concepts (Employment, Compensation, Location, Time Off, Performance,
+    Candidate).
+  created: "2026-05-23"
+  modified: "2026-05-23"
+
+domains:
+  - name: HRIS
+    description: Systems of record for employee data, employment, and lifecycle.
+    providers:
+      - Workday
+      - BambooHR
+      - Rippling
+      - Paylocity
+      - ADP
+      - UKG
+      - Sage People
+      - Personio
+      - HiBob
+      - Namely
+  - name: Unified HRIS API
+    description: Aggregator APIs that normalize HRIS and payroll data across many providers.
+    providers:
+      - Merge HRIS
+      - Finch
+      - Kombo
+  - name: Payroll
+    description: Run payroll, pay statements, deductions, tax filings.
+    providers:
+      - Gusto
+      - Justworks
+      - Paylocity
+      - ADP
+      - UKG
+      - Rippling
+  - name: Applicant Tracking
+    description: Manage jobs, candidates, applications, interviews, offers, hires.
+    providers:
+      - Greenhouse
+      - Lever
+      - Workable
+      - SmartRecruiters
+      - Ashby
+  - name: Performance & Engagement
+    description: Goals, check-ins, reviews, surveys, recognition, growth plans.
+    providers:
+      - Lattice
+      - Culture Amp
+      - 15Five
+  - name: People Data
+    description: External signals about people, talent, and compensation.
+    providers:
+      - LinkedIn Talent Solutions
+      - HiPeople
+      - Compa
+      - OpenComp
+
+resources:
+  - name: employee
+    description: A person in an employer-employee relationship with an organization.
+    schemaOrg: schema:Person
+    schema: json-schema/hr-and-people-employee-schema.json
+  - name: employment
+    description: A position an employee holds at an organization.
+    schemaOrg: schema:EmployeeRole
+    schema: json-schema/hr-and-people-employment-schema.json
+  - name: compensation
+    description: A pay rate record with currency, frequency, and effective period.
+    schemaOrg: schema:MonetaryAmount
+  - name: address
+    description: A postal address used for home or work locations.
+    schemaOrg: schema:PostalAddress
+  - name: location
+    description: A work location (office, site, remote hub).
+    schemaOrg: schema:Place
+  - name: time_off
+    description: Approved or pending leave taken by an employee.
+  - name: candidate
+    description: A person engaged in an application or recruiting workflow (ATS).
+  - name: application
+    description: A candidate's application to a specific job posting (ATS).
+  - name: offer
+    description: An offer extended to a candidate (ATS).
+  - name: review
+    description: A performance review or check-in (Performance Management).
+
+actions:
+  - name: list
+    description: List resources of a given type.
+    pattern: read
+  - name: get
+    description: Read a single resource by identifier.
+    pattern: read
+  - name: create
+    description: Create a new resource.
+    pattern: write
+  - name: update
+    description: Update fields on an existing resource.
+    pattern: write
+  - name: delete
+    description: Delete or terminate a resource.
+    pattern: write
+  - name: sync
+    description: Trigger a sync against an upstream provider (typical of unified APIs).
+    pattern: control
+  - name: webhook
+    description: Subscribe to events on a resource type.
+    pattern: subscribe
+
+enums:
+  employmentStatus:
+    - active
+    - pending
+    - leave
+    - terminated
+    - inactive
+  employmentType:
+    - full_time
+    - part_time
+    - contractor
+    - intern
+    - temporary
+    - freelance
+    - other
+  workerType:
+    - employee
+    - contractor
+    - contingent
+    - intern
+  paymentFrequency:
+    - hour
+    - day
+    - week
+    - biweekly
+    - semimonthly
+    - month
+    - quarter
+    - year
+  paymentUnit:
+    - salary
+    - hourly
+    - commission
+    - bonus
+    - equity
+  payFrequency:
+    - weekly
+    - biweekly
+    - semimonthly
+    - monthly
+  gender:
+    - female
+    - male
+    - non_binary
+    - other
+    - prefer_not_to_disclose
+
+events:
+  - name: employee.hired
+    description: An employee record was created with a future or current start date.
+  - name: employee.updated
+    description: Fields on an employee record changed.
+  - name: employee.terminated
+    description: An employee was terminated.
+  - name: employment.changed
+    description: An employee's job title, department, manager, or pay changed.
+  - name: time_off.requested
+    description: A time-off request was submitted.
+  - name: time_off.approved
+    description: A time-off request was approved.
+  - name: candidate.advanced
+    description: A candidate moved to a new stage in the recruiting pipeline.
+  - name: offer.accepted
+    description: A candidate accepted an offer.
+
+personas:
+  - id: hr-operations
+    name: HR Operations
+    description: Owns employee data quality, lifecycle workflows, and HRIS configuration.
+  - id: people-analytics
+    name: People Analytics
+    description: Builds reporting and analytics over the people data warehouse.
+  - id: it-identity
+    name: IT / Identity
+    description: Provisions and deprovisions access driven off HRIS lifecycle events.
+  - id: recruiter
+    name: Recruiter
+    description: Sources, screens, and advances candidates through the ATS.
+  - id: hiring-manager
+    name: Hiring Manager
+    description: Reviews candidates, conducts interviews, and approves offers.
+  - id: compensation-analyst
+    name: Compensation Analyst
+    description: Benchmarks pay, structures bands, and runs review cycles.
+  - id: payroll-admin
+    name: Payroll Administrator
+    description: Runs payroll, manages deductions, and reconciles pay statements.
+
+crossReference:
+  - resource: employee
+    providersImplementing:
+      - Workday
+      - BambooHR
+      - Rippling
+      - Gusto
+      - Paylocity
+      - ADP
+      - UKG
+      - Personio
+      - HiBob
+      - Namely
+      - Merge HRIS
+      - Finch
+      - Kombo
+    schemaOrg: schema:Person
+  - resource: employment
+    providersImplementing:
+      - Workday
+      - Rippling
+      - ADP
+      - UKG
+      - Merge HRIS
+      - Finch
+      - Kombo
+    schemaOrg: schema:EmployeeRole
+  - resource: candidate
+    providersImplementing:
+      - Greenhouse
+      - Lever
+      - Workable
+      - SmartRecruiters
+      - Ashby
+      - Kombo
+  - resource: review
+    providersImplementing:
+      - Lattice
+      - Culture Amp
+      - 15Five

@@ -1,0 +1,415 @@
+aid: hr-and-people
+url: https://raw.githubusercontent.com/api-evangelist/hr-and-people/refs/heads/main/apis.yml
+name: HR & People
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+- HR
+- HRIS
+- People Operations
+- Payroll
+- Talent Acquisition
+- Performance Management
+- Employee Engagement
+- People Data
+- Workforce Management
+- Unified API
+description: API and integration profile for the HR and people-operations landscape. This topic
+  repo catalogs the API surface of HRIS systems, unified HR APIs, payroll providers, talent
+  acquisition platforms, performance and engagement tools, and people-data services. The focus
+  is a portable Employee record schema (JSON Schema), schema.org/Person aligned semantics
+  (JSON-LD), and a shared vocabulary for the people-operations domain.
+created: '2026-05-23'
+modified: '2026-05-23'
+specificationVersion: '0.19'
+apis:
+- aid: hr-and-people:workday
+  name: Workday
+  description: Workday is a cloud HCM, payroll, and finance suite with a Web Services / REST API
+    catalog spanning Human Capital Management, Payroll, Recruiting, Talent, and Time Tracking.
+  humanURL: https://community.workday.com/api
+  baseURL: https://services1.workday.com
+  tags:
+  - HRIS
+  - HCM
+  - Payroll
+  - Enterprise
+  properties:
+  - url: https://github.com/api-evangelist/workday
+    type: APIEvangelistProfile
+- aid: hr-and-people:bamboohr
+  name: BambooHR
+  description: BambooHR is a cloud HRIS for small and mid-size companies with a REST API for
+    employee records, time off, reports, and webhooks.
+  humanURL: https://documentation.bamboohr.com/docs
+  baseURL: https://api.bamboohr.com/api/gateway.php
+  tags:
+  - HRIS
+  - SMB
+  - Employee Records
+  properties:
+  - url: https://github.com/api-evangelist/bamboohr
+    type: APIEvangelistProfile
+- aid: hr-and-people:rippling
+  name: Rippling
+  description: Rippling is a workforce platform unifying HR, IT, and Finance with a public REST
+    API covering employees, payroll, devices, and apps.
+  humanURL: https://developer.rippling.com
+  baseURL: https://api.rippling.com
+  tags:
+  - HRIS
+  - Payroll
+  - IT
+  - Workforce Platform
+  properties:
+  - url: https://github.com/api-evangelist/rippling
+    type: APIEvangelistProfile
+- aid: hr-and-people:gusto
+  name: Gusto
+  description: Gusto is a payroll, benefits, and HR platform for small business with a partner
+    REST API for embedded payroll and HR.
+  humanURL: https://docs.gusto.com
+  baseURL: https://api.gusto.com
+  tags:
+  - Payroll
+  - HRIS
+  - Benefits
+  - SMB
+  properties:
+  - url: https://github.com/api-evangelist/gusto
+    type: APIEvangelistProfile
+- aid: hr-and-people:justworks
+  name: Justworks
+  description: Justworks is a PEO platform providing payroll, benefits, and compliance with an
+    HRIS API for partners and integrations.
+  humanURL: https://www.justworks.com/developers
+  tags:
+  - PEO
+  - Payroll
+  - Benefits
+  - HRIS
+- aid: hr-and-people:paylocity
+  name: Paylocity
+  description: Paylocity is a cloud payroll and HCM provider with a REST Web Services API for
+    employees, payroll, benefits, time, and labor cost.
+  humanURL: https://www.paylocity.com/our-products/integrations
+  baseURL: https://api.paylocity.com
+  tags:
+  - Payroll
+  - HCM
+  - HRIS
+  properties:
+  - url: https://github.com/api-evangelist/paylocity
+    type: APIEvangelistProfile
+- aid: hr-and-people:adp
+  name: ADP
+  description: ADP is the largest payroll and HCM provider with the ADP Marketplace and ADP
+    Workforce Now / Run / Vantage APIs for HR, payroll, time, and benefits.
+  humanURL: https://developers.adp.com
+  baseURL: https://api.adp.com
+  tags:
+  - Payroll
+  - HCM
+  - Enterprise
+  - Marketplace
+  properties:
+  - url: https://github.com/api-evangelist/adp
+    type: APIEvangelistProfile
+- aid: hr-and-people:ukg
+  name: UKG (Ultimate Kronos Group)
+  description: UKG provides UKG Pro and UKG Ready HCM, workforce management, and payroll with a
+    REST API and integration marketplace.
+  humanURL: https://developer.ukg.com
+  tags:
+  - HCM
+  - Workforce Management
+  - Payroll
+  - Enterprise
+  properties:
+  - url: https://github.com/api-evangelist/ukg
+    type: APIEvangelistProfile
+- aid: hr-and-people:sage-people
+  name: Sage People
+  description: Sage People is a global cloud HR system built on the Salesforce platform with a
+    REST API for workers, employment, leave, and reviews.
+  humanURL: https://developer.sage.com/hr
+  tags:
+  - HRIS
+  - Global HR
+  - Salesforce Platform
+- aid: hr-and-people:personio
+  name: Personio
+  description: Personio is a European all-in-one HR software for SMBs with a REST API for
+    employees, attendance, absences, and applicants.
+  humanURL: https://developer.personio.de
+  baseURL: https://api.personio.de
+  tags:
+  - HRIS
+  - SMB
+  - Europe
+  - Recruiting
+  properties:
+  - url: https://github.com/api-evangelist/personio
+    type: APIEvangelistProfile
+- aid: hr-and-people:hibob
+  name: HiBob
+  description: HiBob is a modern HRIS with a REST API for people data, time off, lifecycle
+    events, performance, and compensation.
+  humanURL: https://apidocs.hibob.com
+  baseURL: https://api.hibob.com
+  tags:
+  - HRIS
+  - People Data
+  - Modern HR
+  properties:
+  - url: https://github.com/api-evangelist/hibob
+    type: APIEvangelistProfile
+- aid: hr-and-people:namely
+  name: Namely
+  description: Namely is a mid-market HRIS with a REST API covering profiles, time off,
+    benefits, and payroll.
+  humanURL: https://developers.namely.com
+  baseURL: https://api.namely.com
+  tags:
+  - HRIS
+  - Mid-Market
+- aid: hr-and-people:merge
+  name: Merge HRIS
+  description: Merge is a unified API platform whose HRIS Unified API normalizes employee,
+    employment, group, time-off, and payroll data across dozens of HRIS systems.
+  humanURL: https://docs.merge.dev/hris/overview
+  baseURL: https://api.merge.dev/api/hris
+  tags:
+  - Unified API
+  - HRIS
+  - Integration Platform
+  properties:
+  - url: https://github.com/api-evangelist/merge
+    type: APIEvangelistProfile
+- aid: hr-and-people:finch
+  name: Finch
+  description: Finch is a unified API for employment systems (HRIS and payroll) covering
+    employee, company, payment, pay-statement, and directory endpoints across hundreds of
+    providers.
+  humanURL: https://developer.tryfinch.com
+  baseURL: https://api.tryfinch.com
+  tags:
+  - Unified API
+  - Employment Systems
+  - HRIS
+  - Payroll
+  properties:
+  - url: https://github.com/api-evangelist/finch
+    type: APIEvangelistProfile
+- aid: hr-and-people:kombo
+  name: Kombo
+  description: Kombo is a European unified HR API normalizing employees, employments, absences,
+    candidates, jobs, and offers across HRIS and ATS providers.
+  humanURL: https://docs.kombo.dev
+  baseURL: https://api.kombo.dev
+  tags:
+  - Unified API
+  - HRIS
+  - ATS
+  - Europe
+  properties:
+  - url: https://github.com/api-evangelist/kombo
+    type: APIEvangelistProfile
+- aid: hr-and-people:greenhouse
+  name: Greenhouse
+  description: Greenhouse is an applicant tracking and recruiting platform with Harvest, Job
+    Board, and Onboarding APIs for candidates, applications, jobs, and offers.
+  humanURL: https://developers.greenhouse.io
+  baseURL: https://harvest.greenhouse.io/v1
+  tags:
+  - ATS
+  - Recruiting
+  - Talent Acquisition
+  properties:
+  - url: https://github.com/api-evangelist/greenhouse
+    type: APIEvangelistProfile
+- aid: hr-and-people:lever
+  name: Lever
+  description: Lever is a talent acquisition platform whose API covers candidates,
+    opportunities, postings, requisitions, interviews, and offers.
+  humanURL: https://hire.lever.co/developer
+  baseURL: https://api.lever.co/v1
+  tags:
+  - ATS
+  - CRM
+  - Talent Acquisition
+  properties:
+  - url: https://github.com/api-evangelist/lever
+    type: APIEvangelistProfile
+- aid: hr-and-people:workable
+  name: Workable
+  description: Workable is a recruiting platform with a REST API for jobs, candidates,
+    activities, comments, and offers, plus a partner marketplace.
+  humanURL: https://workable.readme.io
+  baseURL: https://www.workable.com/spi/v3
+  tags:
+  - ATS
+  - Recruiting
+  - SMB
+  properties:
+  - url: https://github.com/api-evangelist/workable
+    type: APIEvangelistProfile
+- aid: hr-and-people:smartrecruiters
+  name: SmartRecruiters
+  description: SmartRecruiters is an enterprise talent acquisition suite with a REST API for
+    candidates, postings, applications, offers, and onboarding.
+  humanURL: https://developers.smartrecruiters.com
+  baseURL: https://api.smartrecruiters.com
+  tags:
+  - ATS
+  - Talent Acquisition
+  - Enterprise
+  properties:
+  - url: https://github.com/api-evangelist/smartrecruiters
+    type: APIEvangelistProfile
+- aid: hr-and-people:ashby
+  name: Ashby
+  description: Ashby is an all-in-one talent platform with a REST API for candidates,
+    applications, interviews, offers, jobs, and feedback.
+  humanURL: https://developers.ashbyhq.com
+  baseURL: https://api.ashbyhq.com
+  tags:
+  - ATS
+  - Talent Operations
+  - Analytics
+  properties:
+  - url: https://github.com/api-evangelist/ashby
+    type: APIEvangelistProfile
+- aid: hr-and-people:lattice
+  name: Lattice
+  description: Lattice is a people-management platform covering performance, engagement, goals,
+    growth, and compensation with a partner API.
+  humanURL: https://lattice.com/api
+  tags:
+  - Performance Management
+  - Engagement
+  - People Management
+- aid: hr-and-people:culture-amp
+  name: Culture Amp
+  description: Culture Amp is an employee experience platform for engagement, performance, and
+    development with a partner API and integrations marketplace.
+  humanURL: https://www.cultureamp.com/integrations
+  tags:
+  - Engagement
+  - Performance Management
+  - Employee Experience
+- aid: hr-and-people:15five
+  name: 15Five
+  description: 15Five is a continuous performance management platform covering check-ins, OKRs,
+    reviews, and engagement, with an API for HRIS-driven user sync.
+  humanURL: https://help.15five.com/hc/en-us/categories/360002374972
+  tags:
+  - Performance Management
+  - Engagement
+  - OKRs
+- aid: hr-and-people:linkedin-talent-solutions
+  name: LinkedIn Talent Solutions
+  description: LinkedIn Talent Solutions provides Recruiter System Connect, Job Posting,
+    Apply-with-LinkedIn, and Talent Hub APIs for talent acquisition and people data integration.
+  humanURL: https://learn.microsoft.com/en-us/linkedin/talent
+  tags:
+  - People Data
+  - Talent Acquisition
+  - Social
+- aid: hr-and-people:hipeople
+  name: HiPeople
+  description: HiPeople is a talent assessment and reference-checking platform with an API for
+    assessments, reference reports, and candidate insights.
+  humanURL: https://www.hipeople.io/api
+  tags:
+  - Talent Assessment
+  - Reference Checking
+  - People Data
+- aid: hr-and-people:compa
+  name: Compa
+  description: Compa is a real-time compensation intelligence platform for talent acquisition
+    teams, providing offer-level pay benchmarks via API.
+  humanURL: https://www.compa.as
+  tags:
+  - Compensation
+  - People Data
+  - Talent Acquisition
+- aid: hr-and-people:opencomp
+  name: OpenComp
+  description: OpenComp is a compensation planning platform offering pay benchmarks, pay
+    equity, and compensation review tools, with HRIS-driven sync and an API.
+  humanURL: https://www.opencomp.com
+  tags:
+  - Compensation
+  - Pay Equity
+  - People Data
+common:
+- type: APIEvangelistTopic
+  url: https://github.com/api-evangelist/hr-and-people
+- type: JSONSchema
+  url: json-schema/hr-and-people-employee-schema.json
+- type: JSONSchema
+  url: json-schema/hr-and-people-employment-schema.json
+- type: JSONStructure
+  url: json-structure/hr-and-people-employee-structure.json
+- type: JSONLD
+  url: json-ld/hr-and-people-context.jsonld
+- type: Vocabulary
+  url: vocabulary/hr-and-people-vocabulary.yml
+- type: Example
+  url: examples/hr-and-people-employee-example.json
+- type: Example
+  url: examples/hr-and-people-employment-example.json
+- type: Features
+  data:
+  - name: Employee Record Schema
+    description: Portable JSON Schema for an Employee record covering identity, employment,
+      compensation, and lifecycle fields shared across HRIS systems
+  - name: Schema.org Person Alignment
+    description: JSON-LD context aligning the Employee vocabulary with schema.org/Person and
+      schema.org/EmployeeRole for linked-data interoperability
+  - name: HR Provider Catalog
+    description: Catalog of HRIS, unified HR, payroll, ATS, performance, and people-data API
+      providers with links to their developer documentation
+  - name: Unified HRIS Coverage
+    description: Includes the major unified-HRIS API platforms (Merge, Finch, Kombo) that
+      normalize employee data across dozens of underlying HRIS and payroll systems
+  - name: People Operations Vocabulary
+    description: Shared vocabulary mapping employee, employment, compensation, time-off,
+      performance, and recruiting concepts across the HR landscape
+- type: UseCases
+  data:
+  - name: HRIS Integration Mapping
+    description: Map a customer's HRIS data into a normalized Employee record for downstream
+      consumers (provisioning, analytics, compensation, security)
+  - name: Talent Acquisition Pipeline
+    description: Catalog ATS and recruiting APIs feeding candidate, application, offer, and
+      hire data into an HRIS or data warehouse
+  - name: People Data Warehouse
+    description: Build a people-data warehouse keyed on the Employee schema, joining HRIS,
+      payroll, performance, and engagement records
+  - name: Compensation Benchmarking
+    description: Combine HRIS employee/compensation records with compensation-intelligence APIs
+      (Compa, OpenComp) for offer and review benchmarks
+  - name: Joiner-Mover-Leaver Automation
+    description: Drive identity and access lifecycle off HRIS lifecycle events (hire, transfer,
+      termination) via webhooks or unified-API event streams
+  - name: AI Capabilities for HR Workflows
+    description: Provide governed AI capabilities (resume parsing, offer generation,
+      compensation analysis, headcount planning) grounded in the Employee schema
+- type: Integrations
+  data:
+  - name: HRIS Providers
+    description: Workday, BambooHR, Rippling, Gusto, Justworks, Paylocity, ADP, UKG, Sage
+      People, Personio, HiBob, Namely
+  - name: Unified HRIS APIs
+    description: Merge HRIS, Finch, Kombo
+  - name: Applicant Tracking
+    description: Greenhouse, Lever, Workable, SmartRecruiters, Ashby
+  - name: Performance and Engagement
+    description: Lattice, Culture Amp, 15Five
+  - name: People Data and Compensation
+    description: LinkedIn Talent Solutions, HiPeople, Compa, OpenComp
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

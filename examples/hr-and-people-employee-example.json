@@ -1,0 +1,81 @@
+{
+  "@context": "https://raw.githubusercontent.com/api-evangelist/hr-and-people/refs/heads/main/json-ld/hr-and-people-context.jsonld",
+  "@type": "Employee",
+  "id": "emp_8c2a4d31",
+  "remoteId": "WD-00012345",
+  "employeeNumber": "E-00427",
+  "givenName": "Avery",
+  "familyName": "Okafor",
+  "preferredName": "Av",
+  "displayName": "Avery Okafor",
+  "workEmail": "avery.okafor@example.com",
+  "personalEmail": "avery.okafor@gmail.com",
+  "workPhone": "+14155550123",
+  "dateOfBirth": "1990-07-22",
+  "gender": "non_binary",
+  "nationality": "US",
+  "preferredLanguage": "en-US",
+  "avatarUrl": "https://example.com/avatars/avery-okafor.jpg",
+  "homeAddress": {
+    "line1": "742 Evergreen Terrace",
+    "city": "Oakland",
+    "region": "CA",
+    "postalCode": "94612",
+    "country": "US"
+  },
+  "workLocation": {
+    "id": "loc_sf_hq",
+    "name": "San Francisco HQ",
+    "address": {
+      "line1": "123 Market Street",
+      "city": "San Francisco",
+      "region": "CA",
+      "postalCode": "94103",
+      "country": "US"
+    }
+  },
+  "employmentStatus": "active",
+  "employmentType": "full_time",
+  "workerType": "employee",
+  "jobTitle": "Senior Software Engineer",
+  "department": "Engineering",
+  "team": "Platform",
+  "businessUnit": "Product",
+  "managerId": "emp_1f9a0c12",
+  "directReportIds": [],
+  "startDate": "2024-03-04",
+  "originalHireDate": "2024-03-04",
+  "compensation": [
+    {
+      "id": "comp_a1",
+      "rate": 175000,
+      "currency": "USD",
+      "paymentFrequency": "year",
+      "paymentUnit": "salary",
+      "effectiveDate": "2026-01-01"
+    }
+  ],
+  "employments": [
+    {
+      "id": "emp_role_22",
+      "employeeId": "emp_8c2a4d31",
+      "jobTitle": "Senior Software Engineer",
+      "department": "Engineering",
+      "employmentType": "full_time",
+      "workerType": "employee",
+      "ftEquivalent": 1.0,
+      "payRate": 175000,
+      "payCurrency": "USD",
+      "payPeriod": "year",
+      "payFrequency": "biweekly",
+      "effectiveDate": "2026-01-01",
+      "isPrimary": true
+    }
+  ],
+  "customFields": {
+    "shirt_size": "M",
+    "github_handle": "averyok"
+  },
+  "createdAt": "2024-03-01T17:42:11Z",
+  "updatedAt": "2026-01-15T08:13:55Z"
+}

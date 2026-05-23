@@ -1,0 +1,210 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "hrp": "https://api-evangelist.github.io/hr-and-people/schema/",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+    "Employee": {
+      "@id": "schema:Person",
+      "@type": "@id"
+    },
+    "Employment": {
+      "@id": "schema:EmployeeRole"
+    },
+    "Compensation": {
+      "@id": "schema:MonetaryAmount"
+    },
+    "Address": {
+      "@id": "schema:PostalAddress"
+    },
+    "Organization": {
+      "@id": "schema:Organization"
+    },
+    "Location": {
+      "@id": "schema:Place"
+    },
+
+    "id": "@id",
+    "remoteId": {
+      "@id": "hrp:remoteId",
+      "@type": "xsd:string"
+    },
+    "employeeNumber": {
+      "@id": "schema:identifier",
+      "@type": "xsd:string"
+    },
+
+    "givenName": "schema:givenName",
+    "familyName": "schema:familyName",
+    "preferredName": {
+      "@id": "schema:alternateName",
+      "@type": "xsd:string"
+    },
+    "displayName": "schema:name",
+
+    "personalEmail": {
+      "@id": "schema:email",
+      "@type": "xsd:string"
+    },
+    "workEmail": {
+      "@id": "hrp:workEmail",
+      "@type": "xsd:string"
+    },
+    "workPhone": {
+      "@id": "schema:telephone",
+      "@type": "xsd:string"
+    },
+    "personalPhone": {
+      "@id": "hrp:personalPhone",
+      "@type": "xsd:string"
+    },
+
+    "dateOfBirth": {
+      "@id": "schema:birthDate",
+      "@type": "xsd:date"
+    },
+    "gender": "schema:gender",
+    "ethnicity": {
+      "@id": "hrp:ethnicity",
+      "@type": "xsd:string"
+    },
+    "maritalStatus": {
+      "@id": "hrp:maritalStatus",
+      "@type": "xsd:string"
+    },
+    "nationality": {
+      "@id": "schema:nationality",
+      "@type": "xsd:string"
+    },
+    "preferredLanguage": {
+      "@id": "schema:knowsLanguage",
+      "@type": "xsd:string"
+    },
+    "avatarUrl": {
+      "@id": "schema:image",
+      "@type": "@id"
+    },
+
+    "homeAddress": {
+      "@id": "schema:homeLocation",
+      "@type": "@id"
+    },
+    "workLocation": {
+      "@id": "schema:workLocation",
+      "@type": "@id"
+    },
+    "line1": "schema:streetAddress",
+    "line2": {
+      "@id": "hrp:addressLine2",
+      "@type": "xsd:string"
+    },
+    "city": "schema:addressLocality",
+    "region": "schema:addressRegion",
+    "postalCode": "schema:postalCode",
+    "country": "schema:addressCountry",
+
+    "employmentStatus": {
+      "@id": "hrp:employmentStatus",
+      "@type": "xsd:string"
+    },
+    "employmentType": {
+      "@id": "hrp:employmentType",
+      "@type": "xsd:string"
+    },
+    "workerType": {
+      "@id": "hrp:workerType",
+      "@type": "xsd:string"
+    },
+    "jobTitle": "schema:jobTitle",
+    "department": {
+      "@id": "schema:department",
+      "@type": "@id"
+    },
+    "team": {
+      "@id": "hrp:team",
+      "@type": "xsd:string"
+    },
+    "businessUnit": {
+      "@id": "hrp:businessUnit",
+      "@type": "xsd:string"
+    },
+    "managerId": {
+      "@id": "hrp:managerId",
+      "@type": "@id"
+    },
+    "directReportIds": {
+      "@id": "hrp:directReportIds",
+      "@container": "@set",
+      "@type": "@id"
+    },
+
+    "startDate": {
+      "@id": "hrp:startDate",
+      "@type": "xsd:date"
+    },
+    "originalHireDate": {
+      "@id": "hrp:originalHireDate",
+      "@type": "xsd:date"
+    },
+    "terminationDate": {
+      "@id": "hrp:terminationDate",
+      "@type": "xsd:date"
+    },
+    "terminationReason": {
+      "@id": "hrp:terminationReason",
+      "@type": "xsd:string"
+    },
+
+    "compensation": {
+      "@id": "hrp:compensation",
+      "@container": "@set"
+    },
+    "employments": {
+      "@id": "hrp:employments",
+      "@container": "@set"
+    },
+
+    "rate": {
+      "@id": "schema:value",
+      "@type": "xsd:decimal"
+    },
+    "currency": {
+      "@id": "schema:currency",
+      "@type": "xsd:string"
+    },
+    "paymentFrequency": {
+      "@id": "hrp:paymentFrequency",
+      "@type": "xsd:string"
+    },
+    "paymentUnit": {
+      "@id": "hrp:paymentUnit",
+      "@type": "xsd:string"
+    },
+    "effectiveDate": {
+      "@id": "schema:validFrom",
+      "@type": "xsd:date"
+    },
+    "endDate": {
+      "@id": "schema:validThrough",
+      "@type": "xsd:date"
+    },
+
+    "customFields": {
+      "@id": "hrp:customFields"
+    },
+    "remoteData": {
+      "@id": "hrp:remoteData",
+      "@container": "@set"
+    },
+
+    "createdAt": {
+      "@id": "schema:dateCreated",
+      "@type": "xsd:dateTime"
+    },
+    "updatedAt": {
+      "@id": "schema:dateModified",
+      "@type": "xsd:dateTime"
+    }
+  }
+}

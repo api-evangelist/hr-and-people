@@ -1,0 +1,23 @@
+{
+  "id": "emp_role_22",
+  "employeeId": "emp_8c2a4d31",
+  "remoteId": "WD-EMPLOYMENT-77104",
+  "jobTitle": "Senior Software Engineer",
+  "department": "Engineering",
+  "team": "Platform",
+  "businessUnit": "Product",
+  "workLocationId": "loc_sf_hq",
+  "managerId": "emp_1f9a0c12",
+  "employmentType": "full_time",
+  "workerType": "employee",
+  "ftEquivalent": 1.0,
+  "payRate": 175000,
+  "payCurrency": "USD",
+  "payPeriod": "year",
+  "payFrequency": "biweekly",
+  "effectiveDate": "2026-01-01",
+  "endDate": null,
+  "isPrimary": true,
+  "createdAt": "2026-01-01T00:00:00Z",
+  "updatedAt": "2026-01-01T00:00:00Z"
+}

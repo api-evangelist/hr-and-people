@@ -1,0 +1,108 @@
+{
+  "$id": "https://raw.githubusercontent.com/api-evangelist/hr-and-people/refs/heads/main/json-structure/hr-and-people-employee-structure.json",
+  "title": "Employee Structure",
+  "description": "JSON Structure description of the Employee record for the HR & People topic, providing a portable structural view across HRIS, unified-HRIS, payroll, and ATS APIs.",
+  "version": "0.1.0",
+  "namespace": "hr-and-people",
+  "entities": [
+    {
+      "name": "Employee",
+      "description": "A person in an employer-employee relationship with an organization.",
+      "schemaOrg": "https://schema.org/Person",
+      "fields": [
+        { "name": "id", "type": "string", "role": "identifier", "required": true },
+        { "name": "remoteId", "type": "string", "role": "identifier", "description": "Source HRIS identifier" },
+        { "name": "employeeNumber", "type": "string", "role": "identifier" },
+        { "name": "givenName", "type": "string", "required": true, "semantic": "schema:givenName" },
+        { "name": "familyName", "type": "string", "required": true, "semantic": "schema:familyName" },
+        { "name": "preferredName", "type": "string", "semantic": "schema:alternateName" },
+        { "name": "displayName", "type": "string", "semantic": "schema:name" },
+        { "name": "workEmail", "type": "string", "format": "email" },
+        { "name": "personalEmail", "type": "string", "format": "email", "semantic": "schema:email" },
+        { "name": "workPhone", "type": "string", "semantic": "schema:telephone" },
+        { "name": "dateOfBirth", "type": "date", "semantic": "schema:birthDate", "sensitivity": "restricted" },
+        { "name": "gender", "type": "enum", "values": ["female", "male", "non_binary", "other", "prefer_not_to_disclose"], "semantic": "schema:gender" },
+        { "name": "nationality", "type": "string", "semantic": "schema:nationality" },
+        { "name": "homeAddress", "type": "Address", "semantic": "schema:homeLocation" },
+        { "name": "workLocation", "type": "Location", "semantic": "schema:workLocation" },
+        { "name": "employmentStatus", "type": "enum", "values": ["active", "pending", "leave", "terminated", "inactive"] },
+        { "name": "employmentType", "type": "enum", "values": ["full_time", "part_time", "contractor", "intern", "temporary", "freelance", "other"] },
+        { "name": "workerType", "type": "enum", "values": ["employee", "contractor", "contingent", "intern"] },
+        { "name": "jobTitle", "type": "string", "semantic": "schema:jobTitle" },
+        { "name": "department", "type": "string", "semantic": "schema:department" },
+        { "name": "team", "type": "string" },
+        { "name": "businessUnit", "type": "string" },
+        { "name": "managerId", "type": "reference", "references": "Employee" },
+        { "name": "directReportIds", "type": "array", "items": { "type": "reference", "references": "Employee" } },
+        { "name": "startDate", "type": "date" },
+        { "name": "originalHireDate", "type": "date" },
+        { "name": "terminationDate", "type": "date" },
+        { "name": "terminationReason", "type": "string" },
+        { "name": "compensation", "type": "array", "items": { "type": "Compensation" } },
+        { "name": "employments", "type": "array", "items": { "type": "Employment" } },
+        { "name": "customFields", "type": "object", "additionalProperties": true },
+        { "name": "createdAt", "type": "datetime", "semantic": "schema:dateCreated" },
+        { "name": "updatedAt", "type": "datetime", "semantic": "schema:dateModified" }
+      ]
+    },
+    {
+      "name": "Employment",
+      "description": "A position an employee holds at an organization over a period of time.",
+      "schemaOrg": "https://schema.org/EmployeeRole",
+      "fields": [
+        { "name": "id", "type": "string", "role": "identifier", "required": true },
+        { "name": "employeeId", "type": "reference", "references": "Employee", "required": true },
+        { "name": "jobTitle", "type": "string" },
+        { "name": "department", "type": "string" },
+        { "name": "managerId", "type": "reference", "references": "Employee" },
+        { "name": "employmentType", "type": "enum", "values": ["full_time", "part_time", "contractor", "intern", "temporary", "freelance", "other"] },
+        { "name": "workerType", "type": "enum", "values": ["employee", "contractor", "contingent", "intern"] },
+        { "name": "ftEquivalent", "type": "number", "min": 0, "max": 1 },
+        { "name": "payRate", "type": "number" },
+        { "name": "payCurrency", "type": "string" },
+        { "name": "payPeriod", "type": "enum", "values": ["hour", "day", "week", "biweekly", "semimonthly", "month", "quarter", "year"] },
+        { "name": "payFrequency", "type": "enum", "values": ["weekly", "biweekly", "semimonthly", "monthly"] },
+        { "name": "effectiveDate", "type": "date" },
+        { "name": "endDate", "type": "date" },
+        { "name": "isPrimary", "type": "boolean" }
+      ]
+    },
+    {
+      "name": "Compensation",
+      "description": "A compensation record describing pay rate, currency, frequency, and effective period.",
+      "schemaOrg": "https://schema.org/MonetaryAmount",
+      "fields": [
+        { "name": "id", "type": "string", "role": "identifier" },
+        { "name": "rate", "type": "number" },
+        { "name": "currency", "type": "string" },
+        { "name": "paymentFrequency", "type": "enum", "values": ["hour", "day", "week", "biweekly", "semimonthly", "month", "quarter", "year"] },
+        { "name": "paymentUnit", "type": "enum", "values": ["salary", "hourly", "commission", "bonus", "equity"] },
+        { "name": "effectiveDate", "type": "date" },
+        { "name": "endDate", "type": "date" }
+      ]
+    },
+    {
+      "name": "Address",
+      "description": "A postal address.",
+      "schemaOrg": "https://schema.org/PostalAddress",
+      "fields": [
+        { "name": "line1", "type": "string" },
+        { "name": "line2", "type": "string" },
+        { "name": "city", "type": "string" },
+        { "name": "region", "type": "string" },
+        { "name": "postalCode", "type": "string" },
+        { "name": "country", "type": "string", "description": "ISO 3166-1 alpha-2 country code" }
+      ]
+    },
+    {
+      "name": "Location",
+      "description": "A work location.",
+      "schemaOrg": "https://schema.org/Place",
+      "fields": [
+        { "name": "id", "type": "string", "role": "identifier" },
+        { "name": "name", "type": "string" },
+        { "name": "address", "type": "Address" }
+      ]
+    }
+  ]
+}

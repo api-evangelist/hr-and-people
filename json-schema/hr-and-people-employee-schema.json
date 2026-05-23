@@ -1,0 +1,268 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/hr-and-people/refs/heads/main/json-schema/hr-and-people-employee-schema.json",
+  "title": "Employee",
+  "description": "A portable Employee record aligned with the common surface area of HRIS, unified-HRIS, payroll, and ATS APIs (Workday, BambooHR, Rippling, Gusto, ADP, UKG, Personio, HiBob, Merge, Finch, Kombo, Greenhouse, Lever, Ashby).",
+  "type": "object",
+  "required": ["id", "givenName", "familyName"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Provider-assigned unique identifier for the employee.",
+      "example": "emp_8c2a4d31"
+    },
+    "remoteId": {
+      "type": ["string", "null"],
+      "description": "The employee identifier in the source HRIS or payroll system when this record is exposed via a unified API.",
+      "example": "WD-00012345"
+    },
+    "employeeNumber": {
+      "type": ["string", "null"],
+      "description": "Human-facing employee number assigned by the employer.",
+      "example": "E-00427"
+    },
+    "givenName": {
+      "type": "string",
+      "description": "Given (first) name of the employee.",
+      "example": "Avery"
+    },
+    "familyName": {
+      "type": "string",
+      "description": "Family (last) name of the employee.",
+      "example": "Okafor"
+    },
+    "preferredName": {
+      "type": ["string", "null"],
+      "description": "Name the employee prefers to be known by at work.",
+      "example": "Av"
+    },
+    "displayName": {
+      "type": ["string", "null"],
+      "description": "Full name as displayed in the HRIS.",
+      "example": "Avery Okafor"
+    },
+    "personalEmail": {
+      "type": ["string", "null"],
+      "format": "email",
+      "description": "Personal email address of the employee."
+    },
+    "workEmail": {
+      "type": ["string", "null"],
+      "format": "email",
+      "description": "Work email address assigned to the employee.",
+      "example": "avery.okafor@example.com"
+    },
+    "workPhone": {
+      "type": ["string", "null"],
+      "description": "Work phone number in E.164 form when available.",
+      "example": "+14155550123"
+    },
+    "personalPhone": {
+      "type": ["string", "null"],
+      "description": "Personal phone number in E.164 form when available."
+    },
+    "dateOfBirth": {
+      "type": ["string", "null"],
+      "format": "date",
+      "description": "Employee's date of birth (sensitive, often restricted)."
+    },
+    "gender": {
+      "type": ["string", "null"],
+      "description": "Self-reported gender of the employee.",
+      "enum": [null, "female", "male", "non_binary", "other", "prefer_not_to_disclose"]
+    },
+    "ethnicity": {
+      "type": ["string", "null"],
+      "description": "Self-reported ethnicity, where collected for equal-employment reporting."
+    },
+    "maritalStatus": {
+      "type": ["string", "null"],
+      "description": "Marital status, where collected for benefits administration."
+    },
+    "homeAddress": {
+      "$ref": "#/$defs/Address",
+      "description": "Home address of the employee."
+    },
+    "workLocation": {
+      "type": ["object", "null"],
+      "description": "Office or work location assigned to the employee.",
+      "properties": {
+        "id": { "type": ["string", "null"] },
+        "name": { "type": ["string", "null"], "example": "San Francisco HQ" },
+        "address": { "$ref": "#/$defs/Address" }
+      }
+    },
+    "employmentStatus": {
+      "type": "string",
+      "description": "Current employment status.",
+      "enum": ["active", "pending", "leave", "terminated", "inactive"],
+      "example": "active"
+    },
+    "employmentType": {
+      "type": ["string", "null"],
+      "description": "Type of employment relationship.",
+      "enum": [null, "full_time", "part_time", "contractor", "intern", "temporary", "freelance", "other"]
+    },
+    "workerType": {
+      "type": ["string", "null"],
+      "description": "Worker classification (employee vs. contingent worker).",
+      "enum": [null, "employee", "contractor", "contingent", "intern"]
+    },
+    "jobTitle": {
+      "type": ["string", "null"],
+      "description": "Job title of the employee.",
+      "example": "Senior Software Engineer"
+    },
+    "department": {
+      "type": ["string", "null"],
+      "description": "Department or organizational unit the employee belongs to.",
+      "example": "Engineering"
+    },
+    "team": {
+      "type": ["string", "null"],
+      "description": "Team within the department.",
+      "example": "Platform"
+    },
+    "businessUnit": {
+      "type": ["string", "null"],
+      "description": "Business unit or division.",
+      "example": "Product"
+    },
+    "managerId": {
+      "type": ["string", "null"],
+      "description": "Employee id of the direct manager.",
+      "example": "emp_1f9a0c12"
+    },
+    "directReportIds": {
+      "type": "array",
+      "description": "Employee ids of direct reports.",
+      "items": { "type": "string" }
+    },
+    "startDate": {
+      "type": ["string", "null"],
+      "format": "date",
+      "description": "Date the employee started or is scheduled to start at the company.",
+      "example": "2024-03-04"
+    },
+    "originalHireDate": {
+      "type": ["string", "null"],
+      "format": "date",
+      "description": "Original hire date when the employee was first employed (may differ from startDate for rehires)."
+    },
+    "terminationDate": {
+      "type": ["string", "null"],
+      "format": "date",
+      "description": "Date the employee was or will be terminated."
+    },
+    "terminationReason": {
+      "type": ["string", "null"],
+      "description": "Reason associated with the employee's termination."
+    },
+    "compensation": {
+      "type": "array",
+      "description": "Active and historical compensation records for the employee.",
+      "items": { "$ref": "#/$defs/Compensation" }
+    },
+    "employments": {
+      "type": "array",
+      "description": "Employment records (position history) for the employee.",
+      "items": { "$ref": "#/$defs/Employment" }
+    },
+    "ssn": {
+      "type": ["string", "null"],
+      "description": "Tax identifier (SSN/SIN/national id), masked or restricted by most APIs."
+    },
+    "nationality": {
+      "type": ["string", "null"],
+      "description": "Nationality of the employee (ISO 3166-1 alpha-2 country code).",
+      "example": "US"
+    },
+    "preferredLanguage": {
+      "type": ["string", "null"],
+      "description": "Preferred language as a BCP 47 tag.",
+      "example": "en-US"
+    },
+    "avatarUrl": {
+      "type": ["string", "null"],
+      "format": "uri",
+      "description": "URL to the employee's profile photo."
+    },
+    "customFields": {
+      "type": "object",
+      "description": "Employer- or provider-specific custom fields, keyed by field name.",
+      "additionalProperties": true
+    },
+    "remoteData": {
+      "type": "array",
+      "description": "Raw, provider-native payload(s) from the source HRIS for round-trip and audit (used by unified APIs).",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": { "type": "string" },
+          "data": {}
+        }
+      }
+    },
+    "createdAt": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Timestamp the employee record was created in the source system."
+    },
+    "updatedAt": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "Timestamp the employee record was last modified in the source system."
+    }
+  },
+  "$defs": {
+    "Address": {
+      "type": ["object", "null"],
+      "properties": {
+        "line1": { "type": ["string", "null"], "example": "123 Market Street" },
+        "line2": { "type": ["string", "null"] },
+        "city": { "type": ["string", "null"], "example": "San Francisco" },
+        "region": { "type": ["string", "null"], "description": "State, province, or region.", "example": "CA" },
+        "postalCode": { "type": ["string", "null"], "example": "94103" },
+        "country": { "type": ["string", "null"], "description": "ISO 3166-1 alpha-2 country code.", "example": "US" }
+      }
+    },
+    "Compensation": {
+      "type": "object",
+      "properties": {
+        "id": { "type": ["string", "null"] },
+        "rate": { "type": ["number", "null"], "description": "Compensation rate amount.", "example": 175000 },
+        "currency": { "type": ["string", "null"], "description": "ISO 4217 currency code.", "example": "USD" },
+        "paymentFrequency": {
+          "type": ["string", "null"],
+          "enum": [null, "hour", "day", "week", "biweekly", "semimonthly", "month", "quarter", "year"],
+          "example": "year"
+        },
+        "paymentUnit": {
+          "type": ["string", "null"],
+          "enum": [null, "salary", "hourly", "commission", "bonus", "equity"],
+          "example": "salary"
+        },
+        "effectiveDate": { "type": ["string", "null"], "format": "date" },
+        "endDate": { "type": ["string", "null"], "format": "date" }
+      }
+    },
+    "Employment": {
+      "type": "object",
+      "properties": {
+        "id": { "type": ["string", "null"] },
+        "jobTitle": { "type": ["string", "null"] },
+        "payRate": { "type": ["number", "null"] },
+        "payCurrency": { "type": ["string", "null"] },
+        "payPeriod": {
+          "type": ["string", "null"],
+          "enum": [null, "hour", "day", "week", "biweekly", "semimonthly", "month", "quarter", "year"]
+        },
+        "employmentType": {
+          "type": ["string", "null"],
+          "enum": [null, "full_time", "part_time", "contractor", "intern", "temporary", "freelance", "other"]
+        },
+        "effectiveDate": { "type": ["string", "null"], "format": "date" }
+      }
+    }
+  }
+}
