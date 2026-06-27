@@ -356,9 +356,9 @@ common:
   url: json-ld/hr-and-people-context.jsonld
 - type: Vocabulary
   url: vocabulary/hr-and-people-vocabulary.yml
-- type: Example
+- type: Examples
   url: examples/hr-and-people-employee-example.json
-- type: Example
+- type: Examples
   url: examples/hr-and-people-employment-example.json
 - type: Features
   data:
