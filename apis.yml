@@ -344,6 +344,10 @@ apis:
   - Pay Equity
   - People Data
 common:
+- type: TrustCenter
+  url: security/hr-and-people-trust-center.yml
+- type: DomainSecurity
+  url: security/hr-and-people-domain-security.yml
 - type: APIEvangelistTopic
   url: https://github.com/api-evangelist/hr-and-people
 - type: JSONSchema
