@@ -32,7 +32,7 @@ description: API and integration profile for the HR and people-operations landsc
   (JSON-LD), and a shared vocabulary for the people-operations domain.
 created: '2026-05-23'
 modified: '2026-05-23'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: hr-and-people:workday
   name: Workday
