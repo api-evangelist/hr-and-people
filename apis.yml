@@ -24,6 +24,17 @@ tags:
 - Employee Engagement
 - People Data
 - Workforce Management
+- Unified-API
+tags_raw:
+- HR
+- HRIS
+- People Operations
+- Payroll
+- Talent Acquisition
+- Performance Management
+- Employee Engagement
+- People Data
+- Workforce Management
 - Unified API
 description: API and integration profile for the HR and people-operations landscape. This topic
   repo catalogs the API surface of HRIS systems, unified HR APIs, payroll providers, talent
@@ -191,6 +202,10 @@ apis:
   humanURL: https://docs.merge.dev/hris/overview
   baseURL: https://api.merge.dev/api/hris
   tags:
+  - Unified-API
+  - HRIS
+  - Integration Platform
+  tags_raw:
   - Unified API
   - HRIS
   - Integration Platform
@@ -205,6 +220,11 @@ apis:
   humanURL: https://developer.tryfinch.com
   baseURL: https://api.tryfinch.com
   tags:
+  - Unified-API
+  - Employment Systems
+  - HRIS
+  - Payroll
+  tags_raw:
   - Unified API
   - Employment Systems
   - HRIS
@@ -219,6 +239,11 @@ apis:
   humanURL: https://docs.kombo.dev
   baseURL: https://api.kombo.dev
   tags:
+  - Unified-API
+  - HRIS
+  - ATS
+  - Europe
+  tags_raw:
   - Unified API
   - HRIS
   - ATS
