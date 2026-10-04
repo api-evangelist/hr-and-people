@@ -35,7 +35,7 @@ tags:
 - Employee Engagement
 - People Data
 - Workforce Management
-- Unified-API
+- Unified API
 tags_raw:
 - HR
 - HRIS
@@ -47,6 +47,7 @@ tags_raw:
 - People Data
 - Workforce Management
 - Unified API
+- Unified-API
 description: API and integration profile for the HR and people-operations landscape. This topic
   repo catalogs the API surface of HRIS systems, unified HR APIs, payroll providers, talent
   acquisition platforms, performance and engagement tools, and people-data services. The focus
@@ -78,6 +79,10 @@ apis:
   baseURL: https://api.bamboohr.com/api/gateway.php
   tags:
   - HRIS
+  - Small Business
+  - Employee Records
+  tags_raw:
+  - HRIS
   - SMB
   - Employee Records
   properties:
@@ -104,6 +109,11 @@ apis:
   humanURL: https://docs.gusto.com
   baseURL: https://api.gusto.com
   tags:
+  - Payroll
+  - HRIS
+  - Benefits
+  - Small Business
+  tags_raw:
   - Payroll
   - HRIS
   - Benefits
@@ -178,6 +188,11 @@ apis:
   baseURL: https://api.personio.de
   tags:
   - HRIS
+  - Small Business
+  - Europe
+  - Recruiting
+  tags_raw:
+  - HRIS
   - SMB
   - Europe
   - Recruiting
@@ -213,13 +228,14 @@ apis:
   humanURL: https://docs.merge.dev/hris/overview
   baseURL: https://api.merge.dev/api/hris
   tags:
-  - Unified-API
+  - Unified API
   - HRIS
   - Integration Platform
   tags_raw:
   - Unified API
   - HRIS
   - Integration Platform
+  - Unified-API
   properties:
   - url: https://github.com/api-evangelist/merge
     type: APIEvangelistProfile
@@ -231,7 +247,7 @@ apis:
   humanURL: https://developer.tryfinch.com
   baseURL: https://api.tryfinch.com
   tags:
-  - Unified-API
+  - Unified API
   - Employment Systems
   - HRIS
   - Payroll
@@ -240,6 +256,7 @@ apis:
   - Employment Systems
   - HRIS
   - Payroll
+  - Unified-API
   properties:
   - url: https://github.com/api-evangelist/finch
     type: APIEvangelistProfile
@@ -250,15 +267,16 @@ apis:
   humanURL: https://docs.kombo.dev
   baseURL: https://api.kombo.dev
   tags:
-  - Unified-API
+  - Unified API
   - HRIS
-  - ATS
+  - Applicant Tracking
   - Europe
   tags_raw:
   - Unified API
   - HRIS
   - ATS
   - Europe
+  - Unified-API
   properties:
   - url: https://github.com/api-evangelist/kombo
     type: APIEvangelistProfile
@@ -269,6 +287,10 @@ apis:
   humanURL: https://developers.greenhouse.io
   baseURL: https://harvest.greenhouse.io/v1
   tags:
+  - Applicant Tracking
+  - Recruiting
+  - Talent Acquisition
+  tags_raw:
   - ATS
   - Recruiting
   - Talent Acquisition
@@ -282,6 +304,10 @@ apis:
   humanURL: https://hire.lever.co/developer
   baseURL: https://api.lever.co/v1
   tags:
+  - Applicant Tracking
+  - CRM
+  - Talent Acquisition
+  tags_raw:
   - ATS
   - CRM
   - Talent Acquisition
@@ -295,6 +321,10 @@ apis:
   humanURL: https://workable.readme.io
   baseURL: https://www.workable.com/spi/v3
   tags:
+  - Applicant Tracking
+  - Recruiting
+  - Small Business
+  tags_raw:
   - ATS
   - Recruiting
   - SMB
@@ -308,6 +338,10 @@ apis:
   humanURL: https://developers.smartrecruiters.com
   baseURL: https://api.smartrecruiters.com
   tags:
+  - Applicant Tracking
+  - Talent Acquisition
+  - Enterprise
+  tags_raw:
   - ATS
   - Talent Acquisition
   - Enterprise
@@ -321,6 +355,10 @@ apis:
   humanURL: https://developers.ashbyhq.com
   baseURL: https://api.ashbyhq.com
   tags:
+  - Applicant Tracking
+  - Talent Operations
+  - Analytics
+  tags_raw:
   - ATS
   - Talent Operations
   - Analytics
