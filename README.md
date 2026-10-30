@@ -1,4 +1,4 @@
-# HR & People (hr-and-people)
+# HR & People
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,81 +64,107 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-API and integration profile for the **HR and people-operations** landscape — an API Evangelist topic index covering the major HRIS, unified-HRIS, payroll, applicant-tracking, performance / engagement, and people-data API providers.
+API and integration profile for the HR and people-operations landscape. This topic repo catalogs the API surface of HRIS systems, unified HR APIs, payroll providers, talent acquisition platforms, performance and engagement tools, and people-data services. The focus is a portable Employee record schema (JSON Schema), schema.org/Person aligned semantics (JSON-LD), and a shared vocabulary for the people-operations domain.
 
-The focus of this repo is the **portable shape of an Employee record** as it moves across these systems: a JSON Schema for the entity, a JSON-LD context aligning the vocabulary with schema.org/Person, and a shared people-operations vocabulary keyed to the catalog of providers below.
+**Areas:** Human Resources · HRIS · People Operations · Payroll · Talent Acquisition · Performance Management · Employee Engagement · People Data · Workforce Management · Unified API
 
-## Provider Catalog
+## HR & People on APIs.io
 
-### HRIS
+Everything profiled for HR & People is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/hr-and-people/](https://apis.io/providers/hr-and-people/)** — or go straight to one of the APIs or properties below.
 
-| Provider | Developer docs |
-|---|---|
-| Workday | https://community.workday.com/api |
-| BambooHR | https://documentation.bamboohr.com/docs |
-| Rippling | https://developer.rippling.com |
-| Gusto | https://docs.gusto.com |
-| Justworks | https://www.justworks.com/developers |
-| Paylocity | https://www.paylocity.com/our-products/integrations |
-| ADP | https://developers.adp.com |
-| UKG | https://developer.ukg.com |
-| Sage People | https://developer.sage.com/hr |
-| Personio | https://developer.personio.de |
-| HiBob | https://apidocs.hibob.com |
-| Namely | https://developers.namely.com |
+### APIs (27)
 
-### Unified HRIS APIs
+- [Workday](https://apis.io/apis/hr-and-people/workday/) — Workday is a cloud HCM, payroll, and finance suite with a Web Services / REST API catalog spanning Human Capital Management, Payroll, Recruiting, Talent,…
+- [BambooHR](https://apis.io/apis/hr-and-people/bamboohr/) — BambooHR is a cloud HRIS for small and mid-size companies with a REST API for employee records, time off, reports, and webhooks.
+- [Rippling](https://apis.io/apis/hr-and-people/rippling/) — Rippling is a workforce platform unifying HR, IT, and Finance with a public REST API covering employees, payroll, devices, and apps.
+- [Gusto](https://apis.io/apis/hr-and-people/gusto/) — Gusto is a payroll, benefits, and HR platform for small business with a partner REST API for embedded payroll and HR.
+- [Justworks](https://apis.io/apis/hr-and-people/justworks/) — Justworks is a PEO platform providing payroll, benefits, and compliance with an HRIS API for partners and integrations.
+- [Paylocity](https://apis.io/apis/hr-and-people/paylocity/) — Paylocity is a cloud payroll and HCM provider with a REST Web Services API for employees, payroll, benefits, time, and labor cost.
+- [ADP](https://apis.io/apis/hr-and-people/adp/) — ADP is the largest payroll and HCM provider with the ADP Marketplace and ADP Workforce Now / Run / Vantage APIs for HR, payroll, time, and benefits.
+- [UKG (Ultimate Kronos Group)](https://apis.io/apis/hr-and-people/ukg/) — UKG provides UKG Pro and UKG Ready HCM, workforce management, and payroll with a REST API and integration marketplace.
+- [Sage People](https://apis.io/apis/hr-and-people/sage-people/) — Sage People is a global cloud HR system built on the Salesforce platform with a REST API for workers, employment, leave, and reviews.
+- [Personio](https://apis.io/apis/hr-and-people/personio/) — Personio is a European all-in-one HR software for SMBs with a REST API for employees, attendance, absences, and applicants.
+- [HiBob](https://apis.io/apis/hr-and-people/hibob/) — HiBob is a modern HRIS with a REST API for people data, time off, lifecycle events, performance, and compensation.
+- [Namely](https://apis.io/apis/hr-and-people/namely/) — Namely is a mid-market HRIS with a REST API covering profiles, time off, benefits, and payroll.
+- [Merge HRIS](https://apis.io/apis/hr-and-people/merge/) — Merge is a unified API platform whose HRIS Unified API normalizes employee, employment, group, time-off, and payroll data across dozens of HRIS systems.
+- [Finch](https://apis.io/apis/hr-and-people/finch/) — Finch is a unified API for employment systems (HRIS and payroll) covering employee, company, payment, pay-statement, and directory endpoints across hundreds…
+- [Kombo](https://apis.io/apis/hr-and-people/kombo/) — Kombo is a European unified HR API normalizing employees, employments, absences, candidates, jobs, and offers across HRIS and ATS providers.
+- [Greenhouse](https://apis.io/apis/hr-and-people/greenhouse/) — Greenhouse is an applicant tracking and recruiting platform with Harvest, Job Board, and Onboarding APIs for candidates, applications, jobs, and offers.
+- [Lever](https://apis.io/apis/hr-and-people/lever/) — Lever is a talent acquisition platform whose API covers candidates, opportunities, postings, requisitions, interviews, and offers.
+- [Workable](https://apis.io/apis/hr-and-people/workable/) — Workable is a recruiting platform with a REST API for jobs, candidates, activities, comments, and offers, plus a partner marketplace.
+- [SmartRecruiters](https://apis.io/apis/hr-and-people/smartrecruiters/) — SmartRecruiters is an enterprise talent acquisition suite with a REST API for candidates, postings, applications, offers, and onboarding.
+- [Ashby](https://apis.io/apis/hr-and-people/ashby/) — Ashby is an all-in-one talent platform with a REST API for candidates, applications, interviews, offers, jobs, and feedback.
+- [Lattice](https://apis.io/apis/hr-and-people/lattice/) — Lattice is a people-management platform covering performance, engagement, goals, growth, and compensation with a partner API.
+- [Culture Amp](https://apis.io/apis/hr-and-people/culture-amp/) — Culture Amp is an employee experience platform for engagement, performance, and development with a partner API and integrations marketplace.
+- [15Five](https://apis.io/apis/hr-and-people/15five/) — 15Five is a continuous performance management platform covering check-ins, OKRs, reviews, and engagement, with an API for HRIS-driven user sync.
+- [LinkedIn Talent Solutions](https://apis.io/apis/hr-and-people/linkedin-talent-solutions/) — LinkedIn Talent Solutions provides Recruiter System Connect, Job Posting, Apply-with-LinkedIn, and Talent Hub APIs for talent acquisition and people data…
+- [HiPeople](https://apis.io/apis/hr-and-people/hipeople/) — HiPeople is a talent assessment and reference-checking platform with an API for assessments, reference reports, and candidate insights.
+- [Compa](https://apis.io/apis/hr-and-people/compa/) — Compa is a real-time compensation intelligence platform for talent acquisition teams, providing offer-level pay benchmarks via API.
+- [OpenComp](https://apis.io/apis/hr-and-people/opencomp/) — OpenComp is a compensation planning platform offering pay benchmarks, pay equity, and compensation review tools, with HRIS-driven sync and an API.
 
-| Provider | Developer docs |
-|---|---|
-| Merge HRIS | https://docs.merge.dev/hris/overview |
-| Finch | https://developer.tryfinch.com |
-| Kombo | https://docs.kombo.dev |
+### Published properties
 
-### Applicant Tracking / Talent Acquisition
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-| Provider | Developer docs |
-|---|---|
-| Greenhouse | https://developers.greenhouse.io |
-| Lever | https://hire.lever.co/developer |
-| Workable | https://workable.readme.io |
-| SmartRecruiters | https://developers.smartrecruiters.com |
-| Ashby | https://developers.ashbyhq.com |
+#### JSON Schema (2)
 
-### Performance & Engagement
+The data models the API reads and writes.
 
-| Provider | Developer docs |
-|---|---|
-| Lattice | https://lattice.com/api |
-| Culture Amp | https://www.cultureamp.com/integrations |
-| 15Five | https://help.15five.com/hc/en-us/categories/360002374972 |
+- [Employee](https://apis.io/schemas/hr-and-people/hr-and-people-employee/)
+- [Employment](https://apis.io/schemas/hr-and-people/hr-and-people-employment/)
 
-### People Data & Compensation
+#### JSON Structure (1)
 
-| Provider | Developer docs |
-|---|---|
-| LinkedIn Talent Solutions | https://learn.microsoft.com/en-us/linkedin/talent |
-| HiPeople | https://www.hipeople.io/api |
-| Compa | https://www.compa.as |
-| OpenComp | https://www.opencomp.com |
+Data models expressed in JSON Structure.
 
-## Artifacts in this Repo
+- [Hr And People Employee Structure](https://apis.io/json-structure/hr-and-people/hr-and-people-employee-structure/)
 
-| Artifact | Path |
-|---|---|
-| Topic index | [apis.yml](apis.yml) |
-| Employee JSON Schema | [json-schema/hr-and-people-employee-schema.json](json-schema/hr-and-people-employee-schema.json) |
-| Employment JSON Schema | [json-schema/hr-and-people-employment-schema.json](json-schema/hr-and-people-employment-schema.json) |
-| Employee JSON Structure | [json-structure/hr-and-people-employee-structure.json](json-structure/hr-and-people-employee-structure.json) |
-| JSON-LD context (schema.org/Person aligned) | [json-ld/hr-and-people-context.jsonld](json-ld/hr-and-people-context.jsonld) |
-| Employee example | [examples/hr-and-people-employee-example.json](examples/hr-and-people-employee-example.json) |
-| Employment example | [examples/hr-and-people-employment-example.json](examples/hr-and-people-employment-example.json) |
-| People-operations vocabulary | [vocabulary/hr-and-people-vocabulary.yml](vocabulary/hr-and-people-vocabulary.yml) |
+#### JSON-LD (1)
 
-## Why a Topic Repo
+Linked-data contexts for the provider's vocabulary.
 
-The HR & People landscape is unusually fragmented: a single Employee record has its system of record in an HRIS, gets re-shaped by payroll, gets enriched by an ATS at hire, and gets re-projected by performance, engagement, identity, and compensation tools. Unified-HRIS APIs (Merge, Finch, Kombo) have done a lot of work to converge on a portable shape, and this repo captures that shared shape — independent of any one vendor — so it can be used as a contract by AI capabilities, identity automations, and people-data warehouses.
+- [Hr And People Context](https://apis.io/jsonld/hr-and-people/hr-and-people-context/)
 
-## Maintainer
+#### Vocabulary (1)
 
-- Kin Lane — [API Evangelist](https://apievangelist.com) — kin@apievangelist.com
+The provider's domain terms, defined.
+
+- [Hr And People Vocabulary](https://apis.io/vocabularies/hr-and-people/hr-and-people-vocabulary/)
+
+#### Examples (2)
+
+Example requests and responses.
+
+- [Hr And People Employee Example](https://apis.io/examples/hr-and-people/hr-and-people-employee-example/)
+- [Hr And People Employment Example](https://apis.io/examples/hr-and-people/hr-and-people-employment-example/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [HR & People — jsonschema rules](https://apis.io/rules/hr-and-people/hr-and-people-jsonschema-spectral-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Hr And People Domain Security](https://apis.io/security/hr-and-people/hr-and-people-domain-security/)
+- [Hr And People Trust Center](https://apis.io/security/hr-and-people/hr-and-people-trust-center/)
+
+## API Evangelist rating
+
+**Unrated** — no public website could be reached for this company, so there was almost nothing to measure and nothing a reader could check.
+
+This is not a score of zero. No rating is published for this company. If that is wrong because something public exists that we missed, say so on this repository or email [info@apievangelist.com](mailto:info@apievangelist.com) and it will be re-run — free, and no justification needed.
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for HR & People: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/hr-and-people/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
